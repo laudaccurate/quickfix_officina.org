@@ -1,5 +1,5 @@
-html,
-body {
+/* html, */
+/* body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -13,4 +13,84 @@ a {
 
 * {
   box-sizing: border-box;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Pacifico&display=swap");
+@layer utilities {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-xs font-medium uppercase transition-all rounded-md shadow-lg hover:cursor-pointer active:shadow-none;
+  }
+  .btn-primary {
+    @apply text-white bg-primary hover:shadow-primary/50;
+  }
+
+  .btn-danger {
+    @apply text-danger bg-danger/10 hover:shadow-danger/20;
+  }
+
+  .text-input {
+    @apply block px-2 py-3 uppercase  w-full  rounded-md border-gray-300 !text-sm disabled:bg-gray-100;
+  }
+  .text-input-label {
+    @apply inline-block w-full pl-1 mt-3 text-sm font-medium text-gray-800 capitalize;
+  }
+  .text-input-error {
+    @apply border-danger text-danger bg-danger/5 focus:border-danger focus:ring-danger;
+  }
+  .error-helper-text {
+    @apply ml-2 text-xs text-danger;
+  }
+  input[type="checkbox"] {
+    @apply rounded checked:bg-primary focus:ring-primary;
+  }
+  .select input[type="text"] {
+    @apply focus:shadow-none !py-[0.35rem] focus:ring-0;
+  }
 }
+
+::-webkit-scrollbar {
+  @apply w-3;
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-track {
+  @apply border-t-8 bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500/40;
+}
+
+/* -----------------anchor ---------- */
+a {
+  @apply !no-underline hover:!no-underline;
+}
+
+/* ----------------- Disable Number Arrows ------------------  */
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.search-result-li {
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  border-left: 2px solid #228be6;
+}
+
+/* #loginpage{
+  overflow: hidden;
+  flex: 1 1 auto;
+} */
+@media print {
+  .page-break {
+    display: block;
+    page-break-before: always;
+    margin-top: 2cm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
