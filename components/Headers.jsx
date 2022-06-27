@@ -91,7 +91,7 @@ const links = [
   },
   {
     link: "#works",
-    label: "What We Do",
+    label: "Our Services",
   },
   {
     link: "#contact",
