@@ -12,6 +12,7 @@ import {
 import { useBooleanToggle } from "@mantine/hooks";
 import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
 import logo from "../public/images/qf-logo.png";
+// import { ThemeSwitch } from "./ThemeSwitch";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -26,7 +27,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    width: 260,
+    width: 320,
 
     [theme.fn.smallerThan("sm")]: {
       display: "none",
@@ -34,7 +35,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   social: {
-    width: 260,
+    width: 320,
 
     [theme.fn.smallerThan("sm")]: {
       width: "auto",
@@ -89,11 +90,11 @@ const links = [
     label: "Home",
   },
   {
-    link: "/login",
-    label: "Login",
+    link: "#works",
+    label: "What We Do",
   },
   {
-    link: "/contact",
+    link: "#contact",
     label: "Contact Us",
   },
 ];
@@ -150,6 +151,7 @@ export function HeaderMiddle() {
           <ActionIcon size="lg">
             <BrandInstagram size={18} />
           </ActionIcon>
+          {/* <ThemeSwitch /> */}
         </Group>
       </Container>
     </Header>
