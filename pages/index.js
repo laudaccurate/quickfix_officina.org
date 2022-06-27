@@ -1,5 +1,7 @@
-import Services from "../components/Features";
+import Services from "../components/Services";
 import { HeroImageBackground } from "../components/Hero";
+import Banner from "../components/Banner";
+import { Title } from "@mantine/core";
 
 export default function Home() {
   return (
@@ -9,6 +11,10 @@ export default function Home() {
       </div>
       <div id="works">
         <Services />
+      </div>
+      <div className="py-10 px-20 bg-white mx-auto text-center">
+        <Title className="mb-5">Who We Are ....</Title>
+        <Banner />
       </div>
     </div>
   );
