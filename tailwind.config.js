@@ -1,4 +1,5 @@
-const colors = require('tailwindcss/colors');
+/** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   important: true,
@@ -6,8 +7,8 @@ module.exports = {
     preflight: false,
   },
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -16,12 +17,13 @@ module.exports = {
         landing: "url('/images/landing.webp')",
       },
       colors: {
-        primary: '#228be6',
+        primary: "#228be6",
         secondary: colors.gray[600],
 
-        danger: '#FF0000',
+        danger: "#FF0000",
       },
     },
   },
   plugins: [],
 };
+

@@ -10,7 +10,7 @@ import {
 import { useBooleanToggle } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/images/logo.png";
+import logo from "../public/images/qf-logo.png";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -94,13 +94,15 @@ export default function AppHeader() {
 
   return (
     <Header>
-      <div className="px-10 ">
+      <div className="px-10 my-auto">
         <div style={{ paddingBottom: 5 }}>
           <div className={classes.inner}>
             <Link href="/" passHref>
-              <a href="/a">
-                <Image src={logo} alt="logo" />
-              </a>
+              <div className="mt-3">
+                <a href="/a">
+                  <Image src={logo} alt="logo" width={80} height={80} />
+                </a>
+              </div>
             </Link>
             <Group spacing={5} className={classes.links}>
               {items}

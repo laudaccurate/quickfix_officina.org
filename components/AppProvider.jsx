@@ -6,7 +6,8 @@ import Router from "next/router";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
 import AppFooter from "./Footer";
-import AppHeader from "./Header";
+import { HeaderMiddle } from "./Headers";
+// import AppHeader from "./Header";
 
 const AppProvider = ({ children }) => {
   const router = Router.useRouter();
@@ -68,7 +69,7 @@ const AppProvider = ({ children }) => {
             }}
           >
             <div className="h-screen ">
-              <AppHeader />
+              <HeaderMiddle />
               <div className="min-h-[calc(100vh-130px)]">{children}</div>
               <AppFooter />
             </div>
