@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import React from "react";
 import PropTypes from "prop-types";
-import AppProvider from "../components/Application/AppProvider";
+import AppProvider from "../components/AppProvider";
 import ScrollToTop from "../components/ScrollToTop";
 
 const App = ({ Component, pageProps }) => {

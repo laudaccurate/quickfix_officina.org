@@ -1,18 +1,12 @@
 import PropTypes from "prop-types";
-
 import React from "react";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import "@fontsource/roboto-slab/variable.css";
 import Router from "next/router";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
-import AppFooter from "./AppFooter";
-import AppHeader from "./AppHeader";
+import AppFooter from "./Footer";
+import AppHeader from "./Header";
 
 const AppProvider = ({ children }) => {
   const router = Router.useRouter();
