@@ -1,7 +1,22 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import React from "react";
+import PropTypes from "prop-types";
+import AppProvider from "../components/Application/AppProvider";
+import ScrollToTop from "../components/ScrollToTop";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }) => {
+  return (
+    <AppProvider>
+      <ScrollToTop />
+      <Component {...pageProps} />
+    </AppProvider>
+  );
+};
 
-export default MyApp
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.shape({}).isRequired,
+};
+
+export default App;
+
