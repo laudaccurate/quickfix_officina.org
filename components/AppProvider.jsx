@@ -10,8 +10,8 @@ import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import Router from "next/router";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
-import AppFooter from "./Footer";
-import { HeaderMiddle } from "./Headers";
+import Footer from "./Footer";
+import { HeaderMiddle as Header } from "./Headers";
 // import AppHeader from "./Header";
 
 const AppProvider = ({ children }) => {
@@ -88,9 +88,9 @@ const AppProvider = ({ children }) => {
               }}
             >
               <div className="h-screen ">
-                <HeaderMiddle />
+                <Header />
                 <div className="min-h-[calc(100vh-130px)]">{children}</div>
-                <AppFooter />
+                <Footer />
               </div>
             </ModalsProvider>
           </NotificationsProvider>

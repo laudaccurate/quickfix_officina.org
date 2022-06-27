@@ -99,6 +99,18 @@ const links = [
   },
 ];
 
+export default function Logo() {
+  return (
+    <Link href="/" passHref>
+      <div className="mt-4">
+        <a href="/a">
+          <Image src={logo} alt="logo" width={80} height={80} />
+        </a>
+      </div>
+    </Link>
+  );
+}
+
 export function HeaderMiddle() {
   const [opened, toggleOpened] = useBooleanToggle(false);
   const [active, setActive] = useState(links[0].link);
@@ -133,23 +145,17 @@ export function HeaderMiddle() {
           {items}
         </Group>
 
-        <Link href="/" passHref>
-          <div className="mt-4">
-            <a href="/a">
-              <Image src={logo} alt="logo" width={80} height={80} />
-            </a>
-          </div>
-        </Link>
+        <Logo />
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <BrandTwitter size={18} />
+            <BrandTwitter size={22} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandYoutube size={18} />
+            <BrandYoutube size={22} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandInstagram size={18} />
+            <BrandInstagram size={22} />
           </ActionIcon>
           {/* <ThemeSwitch /> */}
         </Group>

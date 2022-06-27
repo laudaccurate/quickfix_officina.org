@@ -1,4 +1,10 @@
+import { HeroImageBackground } from "../components/Hero";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <HeroImageBackground />
+    </div>
+  );
 }
 
