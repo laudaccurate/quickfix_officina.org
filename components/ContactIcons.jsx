@@ -71,9 +71,13 @@ function ContactIcon({
 }
 
 const MOCKDATA = [
-  { title: "Email", description: "hello@mantine.dev", icon: At },
-  { title: "Phone", description: "+49 (800) 335 35 35", icon: Phone },
-  { title: "Address", description: "844 Morris Park avenue", icon: MapPin },
+  { title: "Email", description: "quickfixofficina@gmail.com", icon: At },
+  {
+    title: "Phone",
+    description: "+233 (50) 916 2277  |  +233 (20) 125 2464",
+    icon: Phone,
+  },
+  { title: "Address", description: "Tema Comm 11 & East Legon", icon: MapPin },
   { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: Sun },
 ];
 

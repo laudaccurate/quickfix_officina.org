@@ -152,7 +152,7 @@ export function ContactUs() {
             />
 
             <Group position="right" mt="md">
-              <Button type="submit" className={classes.control}>
+              <Button type="submit" className="bg-primary w-full">
                 Send message
               </Button>
             </Group>
