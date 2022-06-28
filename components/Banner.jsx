@@ -8,6 +8,7 @@ import {
   Text,
   useMantineTheme,
 } from "@mantine/core";
+import bg from "../public/images/img-4.jpg";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -63,7 +64,7 @@ export default function Banner() {
   return (
     <Card
       radius="md"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(${bg.src})` }}
       className={cx(classes.card)}
       // {...others}
     >
@@ -74,11 +75,11 @@ export default function Banner() {
       />
 
       <div className={classes.content}>
-        <Text size="lg" weight={700} className={classes.title}>
+        <Text className="text-center text-white text-2xl font-bold">
           {title}
         </Text>
 
-        <Text size="sm" className={classes.description}>
+        <Text size="lg" className="text-gray-200 text-center text-base">
           {description}
         </Text>
 
@@ -87,7 +88,7 @@ export default function Banner() {
           variant="white"
           color="dark"
           component="a"
-          size="xs"
+          size="md"
           href={action.link}
         >
           {action.label}

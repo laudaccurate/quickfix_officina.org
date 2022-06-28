@@ -13,11 +13,12 @@ export default function Home() {
       <div id="works">
         <Services />
       </div>
-      <div className="py-10 px-20 bg-white mx-auto text-center">
+      <div className="py-10 px-5 bg-white mx-auto text-center">
         <Title className="mb-5">Who We Are ....</Title>
         <Banner />
       </div>
       <div id="contact">
+        <Title className="my-5 text-center">Do Business With Us</Title>
         <ContactUs />
       </div>
     </div>

@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => {
       backgroundColor:
         theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
       borderRadius: theme.radius.lg,
-      padding: 4,
+      padding: 15,
       border: `1px solid ${
         theme.colorScheme === "dark"
           ? theme.colors.dark[8]
@@ -129,7 +129,7 @@ export function ContactUs() {
           onSubmit={(event) => event.preventDefault()}
         >
           <Text size="lg" weight={700} className={classes.title}>
-            Get in touch
+            Need Our Services? Get in touch
           </Text>
 
           <div className={classes.fields}>
