@@ -122,7 +122,11 @@ export function HeroImageBackground() {
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
+          <Button
+            className="h-[42px] w-1/2 mx-auto lg:w-1/5"
+            variant="white"
+            size="lg"
+          >
             <a href="#contact" className="text-primary">
               Contact Us
             </a>

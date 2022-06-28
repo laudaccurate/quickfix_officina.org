@@ -49,7 +49,7 @@ const data = {
     "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   title: "Plan & save",
   description:
-    "Save up to 25% at Fifth Season Hotels in Europe, the Middle East, Africa and Asia Pacific",
+    "We offer the best deals on sale, purchase, swap and repair of various Apple Devices and more. We are open for other businesses too. Hit us up..",
   action: {
     label: "Book now",
     link: "#",
@@ -79,9 +79,11 @@ export default function Banner() {
           {title}
         </Text>
 
-        <Text size="lg" className="text-gray-200 text-center text-base">
-          {description}
-        </Text>
+        <div className="w-full lg:mt-5 lg:w-3/5 text-center mx-auto">
+          <Text size="lg" className="text-gray-200 text-base">
+            {description}
+          </Text>
+        </div>
 
         <Button
           className={classes.action}

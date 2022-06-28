@@ -14,7 +14,7 @@ export default function Home() {
         <Services />
       </div>
       <div className="py-10 px-5 bg-white mx-auto text-center">
-        <Title className="mb-5">Who We Are ....</Title>
+        <Title className="mb-5">Best Deals....</Title>
         <Banner />
       </div>
       <div id="contact">
