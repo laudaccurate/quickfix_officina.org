@@ -7,13 +7,14 @@ import {
   Overlay,
   createStyles,
 } from "@mantine/core";
+import bg from "../public/images/img-3.jpg";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
     paddingTop: 180,
     paddingBottom: 130,
-    backgroundImage: "",
+    backgroundImage: `url(${bg.src})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
 
@@ -102,33 +103,29 @@ export function HeroImageBackground() {
 
   return (
     <div className={classes.wrapper}>
-      <Overlay color="#000" opacity={0.65} zIndex={1} />
+      <Overlay color="#000" opacity={0.5} zIndex={1} />
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          Automated AI code reviews for{" "}
+          Looking to Buy, Sell or Repair{" "}
           <Text component="span" inherit className={classes.highlight}>
-            any stack
+            Apple Devices?
           </Text>
         </Title>
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained
-            to detect lazy developers who do nothing and just complain on
-            Twitter.
+            Let the Plug handle it for you!!! QuickFix Officina got you covered
+            for sale, purchase and repair of iPhones, iPads, MacBoooks and
+            more..
           </Text>
         </Container>
 
         <div className={classes.controls}>
           <Button className={classes.control} variant="white" size="lg">
-            Get started
-          </Button>
-          <Button
-            className={cx(classes.control, classes.secondaryControl)}
-            size="lg"
-          >
-            Live demo
+            <a href="#contact" className="text-primary">
+              Contact Us
+            </a>
           </Button>
         </div>
       </div>
