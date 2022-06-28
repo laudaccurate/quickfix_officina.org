@@ -9,27 +9,27 @@ import {
   Group,
 } from "@mantine/core";
 import {
-  CreditCard,
-  BuildingBank,
+  Devices,
+  Businessplan,
   Repeat,
-  ReceiptRefund,
-  Receipt,
-  ReceiptTax,
-  Report,
-  CashBanknote,
-  Coin,
+  Tool,
+  HotelService,
+  BuildingSkyscraper,
+  BatteryCharging2,
+  TruckDelivery,
+  DeviceWatch,
 } from "tabler-icons-react";
 
 const mockdata = [
-  { title: "Credit cards", icon: CreditCard, color: "violet" },
-  { title: "Banks nearby", icon: BuildingBank, color: "indigo" },
-  { title: "Transfers", icon: Repeat, color: "blue" },
-  { title: "Refunds", icon: ReceiptRefund, color: "green" },
-  { title: "Receipts", icon: Receipt, color: "teal" },
-  { title: "Taxes", icon: ReceiptTax, color: "cyan" },
-  { title: "Reports", icon: Report, color: "pink" },
-  { title: "Payments", icon: Coin, color: "red" },
-  { title: "Cashback", icon: CashBanknote, color: "orange" },
+  { title: "Sales", icon: Devices, color: "violet" },
+  { title: "Purchase", icon: Businessplan, color: "indigo" },
+  { title: "Swap", icon: Repeat, color: "blue" },
+  { title: "Repair", icon: Tool, color: "green" },
+  { title: "Screens/Batteries", icon: BatteryCharging2, color: "cyan" },
+  { title: "Accessories", icon: DeviceWatch, color: "teal" },
+  { title: "Home Services", icon: HotelService, color: "red" },
+  { title: "Office Services", icon: BuildingSkyscraper, color: "pink" },
+  { title: "Delivery", icon: TruckDelivery, color: "orange" },
 ];
 
 const useStyles = createStyles((theme) => ({
@@ -79,11 +79,11 @@ export default function Features() {
 
   return (
     <Card withBorder className={classes.card}>
-      <Group position="apart">
-        <Text className={classes.title}>Services</Text>
-        <Anchor size="xs" color="dimmed" sx={{ lineHeight: 1 }}>
+      <Group position="center">
+        <Text className="text-xl mt-3 font-semibold">Our Services</Text>
+        {/* <Anchor size="xs" color="dimmed" sx={{ lineHeight: 1 }}>
           + 21 other services
-        </Anchor>
+        </Anchor> */}
       </Group>
       <SimpleGrid cols={3} mt="md">
         {items}
