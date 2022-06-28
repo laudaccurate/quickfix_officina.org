@@ -9,8 +9,8 @@ import {
   SimpleGrid,
   createStyles,
 } from "@mantine/core";
-import { ContactIconsList } from "../ContactIcons/ContactIcons";
-import bg from "./bg.svg";
+import { ContactIconsList } from "./ContactIcons";
+import bg from "../public/images/bg.svg";
 
 const useStyles = createStyles((theme) => {
   const BREAKPOINT = theme.fn.smallerThan("sm");
@@ -105,7 +105,7 @@ const useStyles = createStyles((theme) => {
   };
 });
 
-export function GetInTouch() {
+export function ContactUs() {
   const { classes } = useStyles();
 
   return (
