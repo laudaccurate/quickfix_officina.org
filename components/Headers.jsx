@@ -105,6 +105,24 @@ const links = [
   },
 ];
 
+const socials = [
+  {
+    icon: <BrandTwitter size={22} />,
+    link: "https://www.instagram.com/quickfix_officina/",
+    label: "Twitter",
+  },
+  {
+    icon: <BrandYoutube size={22} />,
+    link: "https://www.instagram.com/quickfix_officina/",
+    label: "Youtube",
+  },
+  {
+    icon: <BrandInstagram size={22} />,
+    link: "https://www.instagram.com/quickfix_officina/",
+    label: "Instagram",
+  },
+];
+
 export default function Logo() {
   return (
     <Link href="/" passHref>
@@ -163,16 +181,15 @@ export function HeaderMiddle() {
         <Logo />
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
-            <BrandTwitter size={22} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <BrandYoutube size={22} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <BrandInstagram size={22} />
-          </ActionIcon>
-          {/* <ThemeSwitch /> */}
+          {socials.map((item) => (
+            <ActionIcon size="lg" key={item.label}>
+              <Link href={item.link} passHref>
+                <a target="_blank" className="text-primary">
+                  {item.icon}
+                </a>
+              </Link>
+            </ActionIcon>
+          ))}
         </Group>
       </Container>
       <Collapse
