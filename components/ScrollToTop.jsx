@@ -24,7 +24,7 @@ export default function ScrollToTop() {
       type="button"
       onClick={() => scrollToTop()}
       className={`
-      transition-all  bg-white ease-linear text-primary shadow-gray-600 shadow  grid place-content-center rounded-full fixed bottom-10 right-10
+      transition-all z-[999999]  bg-white ease-linear text-primary shadow-gray-600 shadow  grid place-content-center rounded-full fixed bottom-10 right-10
       ${!scrolled ? "h-0 w-0  overflow-hidden" : "h-12 w-12 "}`}
     >
       <HiArrowNarrowUp className="  h-6 w-6" />

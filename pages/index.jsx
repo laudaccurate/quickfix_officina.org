@@ -10,7 +10,7 @@ export default function Home() {
       <div id="home">
         <HeroImageBackground />
       </div>
-      <div id="works">
+      <div id="services">
         <Services />
       </div>
       <div className="py-10 px-5 bg-white mx-auto text-center">
