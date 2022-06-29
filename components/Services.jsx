@@ -5,7 +5,6 @@ import {
   Text,
   SimpleGrid,
   UnstyledButton,
-  Anchor,
   Group,
 } from "@mantine/core";
 import {
@@ -21,15 +20,80 @@ import {
 } from "tabler-icons-react";
 
 const mockdata = [
-  { title: "Sales", icon: Devices, color: "violet" },
-  { title: "Purchase", icon: Businessplan, color: "indigo" },
-  { title: "Swap", icon: Repeat, color: "blue" },
-  { title: "Repair", icon: Tool, color: "green" },
-  { title: "Screens/Batteries", icon: BatteryCharging2, color: "cyan" },
-  { title: "Accessories", icon: DeviceWatch, color: "teal" },
-  { title: "Home Services", icon: HotelService, color: "red" },
-  { title: "Office Services", icon: BuildingSkyscraper, color: "pink" },
-  { title: "Delivery", icon: TruckDelivery, color: "orange" },
+  {
+    title: "Sales",
+    icon: Devices,
+    color: "violet",
+    style: {
+      // backgroundColor: "#4158D0",
+      backgroundImage:
+        "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+    },
+  },
+  {
+    title: "Purchase",
+    icon: Businessplan,
+    color: "indigo",
+    style: {
+      backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
+    },
+  },
+  {
+    title: "Swap",
+    icon: Repeat,
+    color: "blue",
+    style: {
+      backgroundImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+    },
+  },
+  {
+    title: "Repair",
+    icon: Tool,
+    color: "green",
+    style: {
+      backgroundImage: "linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)",
+    },
+  },
+  {
+    title: "Screens/Batteries",
+    icon: BatteryCharging2,
+    color: "cyan",
+    style: {
+      backgroundImage: "linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)",
+    },
+  },
+  {
+    title: "Accessories",
+    icon: DeviceWatch,
+    color: "teal",
+    style: {
+      backgroundImage: "linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%)",
+    },
+  },
+  {
+    title: "Home Services",
+    icon: HotelService,
+    color: "red",
+    style: {
+      backgroundImage: "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)",
+    },
+  },
+  {
+    title: "Office Services",
+    icon: BuildingSkyscraper,
+    color: "pink",
+    style: {
+      backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
+    },
+  },
+  {
+    title: "Delivery",
+    icon: TruckDelivery,
+    color: "orange",
+    style: {
+      backgroundImage: "linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%)",
+    },
+  },
 ];
 
 const useStyles = createStyles((theme) => ({
@@ -69,9 +133,13 @@ export default function Features() {
   const { classes, theme } = useStyles();
 
   const items = mockdata.map((item) => (
-    <UnstyledButton key={item.title} className={classes.item}>
-      <item.icon color={theme.colors[item.color][6]} size={32} />
-      <Text size="xs" mt={7}>
+    <UnstyledButton
+      key={item.title}
+      style={item.style}
+      className={classes.item}
+    >
+      <item.icon color={theme.white} size={32} />
+      <Text size="xs" color={theme.white} mt={7}>
         {item.title}
       </Text>
     </UnstyledButton>
