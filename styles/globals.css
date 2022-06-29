@@ -18,6 +18,9 @@ a {
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Pacifico&display=swap");
+html {
+  scroll-behaviour: "smooth";
+}
 @layer utilities {
   .btn {
     @apply inline-flex items-center justify-center px-4 py-2 text-xs font-medium uppercase transition-all rounded-md shadow-lg hover:cursor-pointer active:shadow-none;

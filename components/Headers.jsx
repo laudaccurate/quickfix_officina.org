@@ -7,9 +7,10 @@ import {
   Group,
   ActionIcon,
   Container,
+  Collapse,
   Burger,
 } from "@mantine/core";
-import { useBooleanToggle } from "@mantine/hooks";
+import { useBooleanToggle, useWindowScroll } from "@mantine/hooks";
 import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
 import logo from "../public/images/qf-logo.png";
 // import { ThemeSwitch } from "./ThemeSwitch";
@@ -19,7 +20,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    height: 56,
+    height: 70,
 
     [theme.fn.smallerThan("sm")]: {
       justifyContent: "flex-start",
@@ -46,15 +47,16 @@ const useStyles = createStyles((theme) => ({
   burger: {
     marginRight: theme.spacing.md,
 
-    [theme.fn.largerThan("sm")]: {
+    [theme.fn.largerThan("md")]: {
       display: "none",
     },
   },
 
   link: {
+    scrollBehavior: "smooth",
     display: "block",
     lineHeight: 1,
-    padding: "8px 12px",
+    padding: "10px 15px",
     borderRadius: theme.radius.sm,
     textDecoration: "none",
     color:
@@ -63,6 +65,10 @@ const useStyles = createStyles((theme) => ({
         : theme.colors.gray[7],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
+
+    [theme.fn.largerThan("sm")]: {
+      padding: "12px 15px",
+    },
 
     "&:hover": {
       backgroundColor:
@@ -90,7 +96,7 @@ const links = [
     label: "Home",
   },
   {
-    link: "#works",
+    link: "#services",
     label: "Our Services",
   },
   {
@@ -113,10 +119,12 @@ export default function Logo() {
 
 export function HeaderMiddle() {
   const [opened, toggleOpened] = useBooleanToggle(false);
+  const [scroll, scrollTo] = useWindowScroll();
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
+    // <Link key={link.label} href={link.link} passHref>
     <a
       key={link.label}
       href={link.link}
@@ -124,16 +132,23 @@ export function HeaderMiddle() {
         [classes.linkActive]: active === link.link,
       })}
       onClick={(event) => {
-        event.preventDefault();
+        // event.preventDefault();
+
         setActive(link.link);
+        toggleOpened(false);
       }}
     >
       {link.label}
     </a>
+    // </Link>
   ));
 
   return (
-    <Header height={70} mb={1}>
+    <Header
+      className={`${
+        scroll.y >= 60 && "shadow-md"
+      } fixed border-0 transition-all duration-300`}
+    >
       <Container className={classes.inner}>
         <Burger
           opened={opened}
@@ -160,6 +175,14 @@ export function HeaderMiddle() {
           {/* <ThemeSwitch /> */}
         </Group>
       </Container>
+      <Collapse
+        in={opened}
+        className="pt-5 mb-3"
+        // transitionDuration={300}
+        // transitionTimingFunction="linear"
+      >
+        {items}
+      </Collapse>
     </Header>
   );
 }
