@@ -108,7 +108,7 @@ const links = [
 const socials = [
   {
     icon: <BrandTwitter size={22} />,
-    link: "https://www.instagram.com/quickfix_officina/",
+    link: "https://twitter.com/DodooRegwels",
     label: "Twitter",
   },
   {
