@@ -74,11 +74,11 @@ const MOCKDATA = [
   { title: "Email", description: "quickfixofficina@gmail.com", icon: At },
   {
     title: "Phone",
-    description: "+233 (50) 916 2277  |  +233 (20) 125 2464",
+    description: "+233 (54) 916 2277   |     +233 (20) 125 2464",
     icon: Phone,
   },
   { title: "Address", description: "Tema Comm 11 & East Legon", icon: MapPin },
-  { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: Sun },
+  { title: "Working hours", description: "9 a.m. – 8:30 p.m.", icon: Sun },
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }) {
