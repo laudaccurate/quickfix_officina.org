@@ -7,7 +7,7 @@ import {
   Overlay,
   createStyles,
 } from "@mantine/core";
-import bg from "../public/images/img-3.jpg";
+import bg from "../public/images/img-3.webp";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {

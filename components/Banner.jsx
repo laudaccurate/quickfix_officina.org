@@ -1,4 +1,5 @@
 import React from "react";
+import { useInterval } from "@mantine/hooks";
 import {
   createStyles,
   Card,
@@ -8,7 +9,10 @@ import {
   Text,
   useMantineTheme,
 } from "@mantine/core";
-import bg from "../public/images/img-4.jpg";
+import bg1 from "../public/images/img-4.webp";
+import bg2 from "../public/images/img-2.webp";
+import bg3 from "../public/images/img-5.webp";
+import bg4 from "../public/images/img-3.webp";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -56,16 +60,28 @@ const data = {
   },
 };
 
+const images = [bg1, bg2, bg3, bg4];
+
 export default function Banner() {
-  const { image, title, description, action } = data;
+  const [image, setImage] = React.useState(0);
+  const interval = useInterval(
+    () => setImage((s) => (s < 3 ? s + 1 : 0)),
+    10000
+  );
+  const { title, description, action } = data;
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
+
+  React.useEffect(() => {
+    interval.start();
+    return interval.stop();
+  }, []);
 
   return (
     <Card
       radius="md"
-      style={{ backgroundImage: `url(${bg.src})` }}
-      className={cx(classes.card)}
+      style={{ backgroundImage: `url(${images[image].src})` }}
+      className={`${cx(classes.card)} transition-all duration-700`}
       // {...others}
     >
       <Overlay
