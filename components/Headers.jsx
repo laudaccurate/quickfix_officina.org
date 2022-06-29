@@ -11,7 +11,7 @@ import {
   Burger,
 } from "@mantine/core";
 import { useBooleanToggle, useWindowScroll } from "@mantine/hooks";
-import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
+import { BrandTwitter, Mail, BrandInstagram } from "tabler-icons-react";
 import logo from "../public/images/qf-logo.png";
 // import { ThemeSwitch } from "./ThemeSwitch";
 
@@ -112,14 +112,14 @@ const socials = [
     label: "Twitter",
   },
   {
-    icon: <BrandYoutube size={22} />,
-    link: "https://www.instagram.com/quickfix_officina/",
-    label: "Youtube",
-  },
-  {
     icon: <BrandInstagram size={22} />,
     link: "https://www.instagram.com/quickfix_officina/",
     label: "Instagram",
+  },
+  {
+    icon: <Mail size={22} />,
+    link: "mailto:quickfixofficina@gmail.com",
+    label: "Mail",
   },
 ];
 
