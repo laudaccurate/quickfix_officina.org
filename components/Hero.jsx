@@ -106,7 +106,7 @@ export function HeroImageBackground() {
       <Overlay color="#000" opacity={0.5} zIndex={1} />
 
       <div className={classes.inner}>
-        <Title className={classes.title}>
+        <Title className={`${classes.title} mt-6 lg:mt-0`}>
           Looking to Buy, Sell or Repair{" "}
           <Text component="span" inherit className={classes.highlight}>
             Apple Devices?

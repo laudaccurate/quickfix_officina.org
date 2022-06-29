@@ -55,8 +55,8 @@ const data = {
   description:
     "We offer the best deals on sale, purchase, swap and repair of various Apple Devices and more. We are open for other businesses too. Hit us up..",
   action: {
-    label: "Book now",
-    link: "#",
+    label: "Try Us",
+    link: "#contact",
   },
 };
 
@@ -66,7 +66,7 @@ export default function Banner() {
   const [image, setImage] = React.useState(0);
   const interval = useInterval(
     () => setImage((s) => (s < 3 ? s + 1 : 0)),
-    10000
+    5000
   );
   const { title, description, action } = data;
   const { classes, cx } = useStyles();

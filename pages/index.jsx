@@ -17,7 +17,7 @@ export default function Home() {
         <Title className="mb-5">Best Deals....</Title>
         <Banner />
       </div>
-      <div id="contact">
+      <div id="contact" className="mb-10">
         <Title className="my-5 text-center">Do Business With Us</Title>
         <ContactUs />
       </div>
