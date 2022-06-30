@@ -55,11 +55,12 @@ const mockdata = [
     },
   },
   {
-    title: "Screens/Batteries",
+    title: "Screen/Battery",
     icon: BatteryCharging2,
     color: "cyan",
     style: {
-      backgroundImage: "linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)",
+      backgroundImage:
+        "linear-gradient(19deg, #8c4f4b 0%, #DDD6F3 50%, #1736bc 100%)",
     },
   },
   {
@@ -139,7 +140,7 @@ export default function Features() {
       className={classes.item}
     >
       <item.icon color={theme.white} size={32} />
-      <Text size="xs" color={theme.white} mt={7}>
+      <Text className="text-white font-medium text-sm" mt={7}>
         {item.title}
       </Text>
     </UnstyledButton>
