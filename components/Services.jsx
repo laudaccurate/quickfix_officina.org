@@ -27,7 +27,7 @@ const mockdata = [
     style: {
       // backgroundColor: "#4158D0",
       backgroundImage:
-        "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+        "linear-gradient(19deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
     },
   },
   {
@@ -35,7 +35,7 @@ const mockdata = [
     icon: Businessplan,
     color: "indigo",
     style: {
-      backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
+      backgroundImage: "linear-gradient(19deg, #0093E9 0%, #80D0C7 100%)",
     },
   },
   {
@@ -43,7 +43,7 @@ const mockdata = [
     icon: Repeat,
     color: "blue",
     style: {
-      backgroundImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      backgroundImage: "linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%)",
     },
   },
   {
@@ -76,7 +76,7 @@ const mockdata = [
     icon: HotelService,
     color: "red",
     style: {
-      backgroundImage: "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)",
+      backgroundImage: "linear-gradient(19deg, #8BC6EC 0%, #9599E2 100%)",
     },
   },
   {
@@ -92,7 +92,8 @@ const mockdata = [
     icon: TruckDelivery,
     color: "orange",
     style: {
-      backgroundImage: "linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%)",
+      backgroundImage:
+        "linear-gradient(19deg, #FFDEE9 0%,#DDD6F3 50%, #B5FFFC 100%)",
     },
   },
 ];
