@@ -149,15 +149,21 @@ export default function Features() {
 
   return (
     <Card withBorder className={classes.card}>
-      <Group position="center">
+      <div className="text-center">
         <Text className="text-xl mt-3 font-semibold">Our Services</Text>
+
         {/* <Anchor size="xs" color="dimmed" sx={{ lineHeight: 1 }}>
           + 21 other services
         </Anchor> */}
-      </Group>
+      </div>
       <SimpleGrid cols={3} mt="md">
         {items}
       </SimpleGrid>
+      <div className="text-center">
+        <Text className="text-sm mt-7 font-light italic">
+          QuickFix Officina... We get it done!!!
+        </Text>
+      </div>
     </Card>
   );
 }

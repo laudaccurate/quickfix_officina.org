@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useInterval } from "@mantine/hooks";
 import {
@@ -66,7 +67,7 @@ export default function Banner() {
   const [image, setImage] = React.useState(0);
   const interval = useInterval(
     () => setImage((s) => (s < 3 ? s + 1 : 0)),
-    5000
+    10000
   );
   const { title, description, action } = data;
   const { classes, cx } = useStyles();
@@ -102,7 +103,7 @@ export default function Banner() {
         </div>
 
         <Button
-          className={classes.action}
+          className={`${classes.action} text-primary`}
           variant="white"
           color="dark"
           component="a"
