@@ -140,7 +140,7 @@ export default function Features() {
       className={classes.item}
     >
       <item.icon color={theme.white} size={32} />
-      <Text className="text-white font-medium text-sm" mt={7}>
+      <Text className="text-white font-medium text-base" mt={7}>
         {item.title}
       </Text>
     </UnstyledButton>
